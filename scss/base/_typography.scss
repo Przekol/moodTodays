@@ -1,0 +1,111 @@
+@use '../utils/' as *;
+
+// body {
+
+// }
+
+h1,
+.h1 {
+	--fs-heading: var(--fs-heading-md);
+	--lh-heading: var(--lh-heading-md);
+	font-size: var(--fs-heading);
+	line-height: var(--lh-heading);
+
+	// @include mq(medium) {
+	// 	--fs-heading: var(--fs-heading-md);
+	// 	--lh-heading: var(--lh-heading-md);
+	// }
+	@include mq(small) {
+		--fs-heading: var(--fs-heading-xl);
+		--lh-heading: var(--lh-heading-xl);
+	}
+}
+
+.text {
+	--fs-text: var(--fs-text-lg);
+	--lh-text: var(--lh-text-lg);
+
+	font-size: var(--fs-text);
+	line-height: var(--lh-text);
+
+	@include mq(small) {
+		--fs-heading: var(--fs-text-xl);
+		--lh-heading: var(--lh-text-xl);
+	}
+}
+
+h2,
+.h2 {
+	--fs-heading: var(--fs-heading-sm);
+	--lh-heading: var(--lh-heading-sm);
+	font-size: var(--fs-heading);
+	line-height: var(--lh-heading);
+
+	@include mq(small) {
+		--fs-heading: var(--fs-heading-md);
+		--lh-heading: var(--lh-heading-md);
+	}
+}
+
+h3, .h3 {
+	--fs-heading: var(--fs-heading-xs);
+	--lh-heading: var(--lh-heading-xs);
+	font-size: var(--fs-heading);
+	line-height: var(--lh-heading);
+
+	@include mq(small) {
+		--fs-heading: var(--fs-heading-sm);
+		--lh-heading: var(--lh-heading-sm);
+	}
+}
+
+.h1,
+.h2,
+.h3 .subtitle,
+.overline {
+	font-weight: var(--fw-bold);
+}
+
+.text,
+.caption {
+	font-weight: var(--fw-regular);
+}
+.h1 {
+	letter-spacing: -0.02em;
+}
+
+.subtitle {
+	color: var(--primary-900);
+	text-align: center;
+}
+
+
+// h2,
+// .h2 {
+
+// }
+// h3,
+// .h3 {
+
+// }
+
+// .subtitle-1 {
+// 	font-size: var(--fs-400);
+// }
+// .text,
+
+// .subtitle-2 {
+// 	font-size: var(--fs-300);
+// }
+// .caption {
+// 	font-size: var(--fs-200);
+// }
+// .overline {
+// 	font-size: var(--fs-100);
+// }
+
+// .h4,
+// .h5,
+// .h6 {
+// 	font-weight: var(--fw-medium);
+// }

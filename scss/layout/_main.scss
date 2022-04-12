@@ -1,0 +1,17 @@
+@use '../utils/' as *;
+
+.main {
+	position: relative;
+	background-color: var(--primary-50);
+	width: 100%;
+	min-height: 100vh;
+
+	.wrapper {
+		position: absolute;
+		top: 2%;
+		left: 50%;
+		width: 100%;
+
+		transform: translateX(-50%);
+	}
+}

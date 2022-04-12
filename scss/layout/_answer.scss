@@ -1,0 +1,84 @@
+@use '../utils/' as *;
+
+.answer {
+
+    // position: absolute;
+	// bottom: 2%;
+	// left: 50%;
+	// width: 100%;
+
+	// transform: translateX(-50%);
+	&__card {
+		padding-top: var(--spacing-4);
+		padding-bottom: var(--spacing-4);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: var(--spacing-8);
+	}
+	&__title {
+		margin-top: var(--spacing-4);
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-8);
+		width: 100%;
+		box-shadow: shadow(xl);
+		background-color: var(--primary-50);
+		padding-top: var(--spacing-4);
+		padding-bottom: var(--spacing-4);
+		border-radius: 0.5em;
+
+		@include mq(small) {
+			flex-direction: row;
+		}
+	}
+	&__mood {
+		width: 100%;
+	}
+
+	&__mood-number {
+		--fs-heading: var(--fs-heading-lg);
+		--lh-heading: var(--lh-heading-lg);
+		font-size: var(--fs-heading);
+		line-height: var(--lh-heading);
+		color: var(--primary-600);
+		font-weight: var(--fw-medium);
+
+		@include mq(small) {
+			--fs-heading: var(--fs-heading-xl);
+			--lh-heading: var(--lh-heading-xl);
+		}
+	}
+
+	&__mood-text {
+		--fs-text: var(--fs-text-lg);
+		--lh-text: var(--lh-text-lg);
+		margin-top: var(--spacing-3);
+		font-size: var(--fs-text);
+		line-height: var(--lh-text);
+		color: var(--primary-900);
+	}
+
+	&__advice-box {
+		justify-content: center;
+
+		&--happy {
+			color: var(--success-700);
+			background-color: var(--success-100);
+		}
+		&--bored {
+			color: var(--warning-700);
+			background-color: var(--warning-100);
+		}
+
+		&--bad {
+			color: var(--error-700);
+			background-color: var(--error-100);
+		}
+	}
+}
