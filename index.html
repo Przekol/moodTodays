@@ -30,29 +30,9 @@
     </header>
 
 
-    <main class="main">
-        <section class=" hero  start">
-            <div class="hero__name container">
-                <div class="hero__name-capture hidde ">
-                    <div class="input__field">
-                        <input class="hero__input input" type="text" placeholder="Podaj swoje imię">
-                        <div class="hero__hint-text input__hint-text">Minimum 3 znaki</div>
-                    </div>
-                    <button data-button="first-start" class="hero__btn btn btn--xl btn--contained">Zaczynamy</button>
-                </div>
-                <div class="hero__name-display hidden">
-                    <div class="hero_name-content">
-                        <h2 class="hero__subtitle h2">Cześć, <strong><span data-user-name>Przemek</span></strong></h2>
-                        <p class="hero__text-info text">Pochwal się swoim dzisiejszym samopoczuciem.</p>
-                    </div>
-                    <a data-button="start" class="hero__btn btn btn--xl btn--contained">Zaczynamy</a>
-                </div>
 
-            </div>
-            <div class="hero__img container">
-                <button class="btn btn--outlined"><img src="./images/pixel.png" alt=""></button>
-            </div>
-        </section>
+    <main class="main">
+
 
         <section class="wrapper">
 
@@ -63,14 +43,14 @@
                     <div class="question__emoticons">
                         <button class="btn btn--outlined"><img data-emotion="bad" class="question__emoticon" src="/images/bad.png"
                                 alt="emoticon bad"></button>
-                        <button class="btn btn--outlined"><img data-emotion="bored" class="question__emoticon" src="/images/bored.png"
-                                alt="emoticon bored"></button>
+                        <button class="btn btn--outlined"><img data-emotion="bored" class="question__emoticon"
+                                src="/images/bored.png" alt="emoticon bored"></button>
                         <button class="btn btn--outlined"> <img data-emotion="happy" class="question__emoticon"
                                 src="/images/happy.png" alt="emoticon happy"></button>
                     </div>
                 </div>
             </section>
-    
+
             <section class="answer hidde">
                 <div class="card container">
                     <h2 class="h2 subtitle">Twoje samopoczucie w ostatnim czasie</h2>
@@ -92,11 +72,12 @@
                             </div>
                         </div>
                         <!-- <img data-day="today" data-emoticon-day="bad" class="answer__img" src="/images/bad.png" alt=" emoticon bad"> -->
-    
+
                     </div>
-    
+
                     <div class="answer__previous answer__card">
-                        <h3 class="answer__title h3 subtitle">Ostatnio - <span data-day-pervious="08.04.2021">08.04.2021</span></h3>
+                        <h3 class="answer__title h3 subtitle">Ostatnio - <span data-day-pervious="08.04.2021">08.04.2021</span>
+                        </h3>
                         <div class="answer__content">
                             <div class="answer__mood bad">
                                 <p class="answer__mood-number" data-mood data-mood-previous="bad">0</p>
@@ -111,7 +92,7 @@
                                 <p class="answer__mood-text">Szczęśliwy</p>
                             </div>
                         </div>
-    
+
                         <!-- <img data-day="previous" data-emoticon-day="happy" class="answer__img" src="/images/happy.png"
                             alt="emoticon happy"> -->
                     </div>
@@ -122,15 +103,54 @@
                             <p class="answer__advice-text text">Może to czas na wizytę u specjalisty?</p>
                         </div>
                     </div>
-    
+
             </section>
         </section>
-     
+
 
     </main>
 
 
+    <section class=" hero show  ">
 
+        <div class=" modal">
+            <header class="header container">
+               
+                <div class="header__toggle">
+                    <button aria-label="Przełącznik trybu nocnego" data-toggle-theme class="toggle toggle--md">
+                        <div class="toggle__circle "></div>
+                    </button>
+                </div>
+
+                <div class="header__title">
+                    <h1 class="header__title h1">Mood today's</h1>
+                    <p class="header__text-info text">Codzienna informacja o tym jak się czujesz</p>
+                </div>
+
+            </header>
+
+            <div class="hero__name container">
+                <div class="hero__name-capture">
+                    <div class="input__field">
+                        <input class="hero__input input" type="text" placeholder="Podaj swoje imię">
+                        <div class="hero__hint-text input__hint-text">Minimum 3 znaki</div>
+                    </div>
+                    <button data-button="first-start" class="hero__btn btn btn--xl btn--contained">Zaczynamy</button>
+                </div>
+                <!-- <div class="hero__name-display hidde">
+                    <div class="hero_name-content">
+                        <h2 class="hero__subtitle h2">Cześć, <strong><span data-user-name>Przemek</span></strong></h2>
+                        <p class="hero__text-info text">Pochwal się swoim dzisiejszym samopoczuciem.</p>
+                    </div>
+                    <a data-button="start" class="hero__btn btn btn--xl btn--contained">Zaczynamy</a>
+                </div> -->
+                <div class="hero__img container">
+                    <button class="btn btn--outlined"><img src="./images/pixel.png" alt=""></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
 

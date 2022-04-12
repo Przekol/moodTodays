@@ -6,6 +6,7 @@
 	box-shadow: shadow(2xl);
 
 	background: linear-gradient(26.57deg, var(--bg-gradient-1) 8.33%, var(--bg-gradient-2) 91.67%);
+	width: 100%;
 
 	@include mq(small) {
 		padding-top: var(--spacing-16);

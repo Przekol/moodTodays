@@ -1,20 +1,37 @@
 @use '../utils/' as *;
 
 .hero {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-    padding-top: var(--spacing-4);
-	padding-bottom: var(--spacing-4);
-    
-	gap: var(--spacing-8);
-    box-shadow: shadow(lg);
-    @include mq(small) {
-		padding-top: var(--spacing-16);
-		padding-bottom: var(--spacing-16);
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include blurs(md, dark);
+
+	.modal {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 75em;
+		height: 100%;
+
+		box-shadow: shadow(lg);
+		border-radius: 0.5rem;
+		background-color: var(--primary-50);
+		@include mq(small) {
+			width: 80%;
+			height: 80%;
+		}
+		overflow: hidden;
 	}
 
-	
 	&__subtitle {
 		color: var(--primary-900);
 		text-align: center;
@@ -25,16 +42,17 @@
 			text-align: left;
 		}
 	}
-    &__text-info {
+	&__text-info {
 		color: var(--primary-700);
 		text-align: center;
 	}
-	
 
 	&__name {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 		width: 100%;
-		// height: 20vh;
-		padding-top: var(--spacing-8);
+		height: 100%;
 	}
 
 	&__name-capture,
@@ -70,14 +88,12 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-}
-
-.hero.start {
-	.hero {
-		&__name,
-		&__img {
-			visibility: hidden;
+		max-width: 280px;
+		max-height: 220px;
+		@include mq(small) {
+			max-width: 20em;
 		}
 	}
 }
+
+
