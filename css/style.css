@@ -1,48 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Manrope:wght@700&family=Roboto:wght@300;400;500;700;900&display=swap");
 :root {
-  --bg-line: var(--primary-900);
-  --bg-gradient-1: var(--primary-800);
-  --bg-gradient-2: var(--primary-700);
-  --bg-section: var(--primary-200);
-  --bg-modal: var(--primary-50);
-  --bg-main: var(--primary-50);
-  --bg-content: var(--primary-50);
-  --text-header-info: var(--primary-200);
-  --text-hint: var(--primary-700);
-  --text-subtitle: var(--primary-900);
-  --text-mood-number: var(--primary-600);
-  --text-mood: var(--primary-900);
-  --btn-color-base: var(--gray-0);
-  --btn-font-color: var(--primary-700);
-  --btn-bg-color: var(--btn-color-base);
-  --btn-bg-color-hover: var(--primary-50);
-  --btn-font-color-disabled: var(--gray-300);
-  --btn-border-color-outlined: var(--primary-300);
-  --btn-bg-color-hover-outlined: var(--primary-50);
-  --btn-border-color-hover-outlined: var(--primary-300);
-  --btn-font-color-disabled-outlined: var(--primary-300);
-  --btn-border-color-disabled-outlined: var(--primary-200);
-  --btn-bg-color-shaded: var(--primary-50);
-  --btn-border-color-shaded: var(--primary-50);
-  --btn-bg-color-hover-shaded: var(--primary-100);
-  --btn-border-color-hover-shaded: var(--primary-100);
-  --btn-font-color-disabled-shaded: var(--primary-300);
-  --btn-bg-color-disabled-shaded: var(--primary-25);
-  --btn-border-color-disabled-shaded: var(--primary-25);
-  --btn-font-color-contained: var(--btn-color-base);
-  --btn-bg-color-contained: var(--primary-600);
-  --btn-border-color-contained: var(--primary-600);
-  --btn-bg-color-hover-contained: var(--primary-700);
-  --btn-border-color-hover-contained: var(--primary-700);
-  --btn-font-color-disabled-contained: var(--btn-color-base);
-  --btn-bg-color-disabled-contained: var(--primary-200);
-  --btn-border-color-disabled-contained: var(--primary-200);
-  --shadow: var(--rgb-gray);
-  --shadow-focus: var(--primary-100);
-  --ripple-effect: var(--primary-400);
-}
-
-:root {
   --ff-primary: 'Lato', sans-serif;
   --ff-secondary: 'Roboto', sans-serif;
   --ff-tertiary: 'Manrope', sans-serif;
@@ -101,7 +58,7 @@
   --gray-600: hsl(215deg, 18%, 34%);
   --gray-700: hsl(217deg, 23%, 27%);
   --gray-800: hsl(215deg, 32%, 17%);
-  --gray-900: hsl(220deg, 43%, 11%);
+  --gray-900: rgb(16, 24, 40);
   --gray-1000: hsl(0deg, 0%, 0%);
   --primary-25: hsl(264deg, 100%, 99%);
   --primary-50: hsl(264deg, 100%, 98%);
@@ -125,6 +82,7 @@
   --rgb-ligth: 255, 255, 255;
   --rgb-dark: 52, 64, 84;
   --rgb-gray: 16, 24, 40;
+  --rgb-primary: 66, 48, 126;
 }
 :root [data-theme=light] {
   --gray-0: hsl(0deg, 0%, 100%);
@@ -138,7 +96,7 @@
   --gray-600: hsl(215deg, 18%, 34%);
   --gray-700: hsl(217deg, 23%, 27%);
   --gray-800: hsl(215deg, 32%, 17%);
-  --gray-900: hsl(220deg, 43%, 11%);
+  --gray-900: rgb(16, 24, 40);
   --gray-1000: hsl(0deg, 0%, 0%);
 }
 :root [data-theme=light] {
@@ -211,6 +169,49 @@
 :root [data-theme=dark] {
   --btn-bg-color: var(--gray-300);
   --btn-bg-color-hover-outlined: var(--gray-400);
+}
+
+:root {
+  --bg-line: var(--primary-900);
+  --bg-gradient-1: var(--primary-800);
+  --bg-gradient-2: var(--primary-700);
+  --bg-section: var(--primary-200);
+  --bg-modal: var(--primary-50);
+  --bg-main: var(--primary-50);
+  --bg-content: var(--primary-50);
+  --text-header-info: var(--primary-200);
+  --text-hint: var(--primary-700);
+  --text-subtitle: var(--primary-900);
+  --text-mood-number: var(--primary-600);
+  --text-mood: var(--primary-900);
+  --btn-color-base: var(--gray-0);
+  --btn-font-color: var(--primary-700);
+  --btn-bg-color: var(--btn-color-base);
+  --btn-bg-color-hover: var(--primary-50);
+  --btn-font-color-disabled: var(--gray-300);
+  --btn-border-color-outlined: var(--primary-300);
+  --btn-bg-color-hover-outlined: var(--primary-50);
+  --btn-border-color-hover-outlined: var(--primary-300);
+  --btn-font-color-disabled-outlined: var(--primary-300);
+  --btn-border-color-disabled-outlined: var(--primary-200);
+  --btn-bg-color-shaded: var(--primary-50);
+  --btn-border-color-shaded: var(--primary-50);
+  --btn-bg-color-hover-shaded: var(--primary-100);
+  --btn-border-color-hover-shaded: var(--primary-100);
+  --btn-font-color-disabled-shaded: var(--primary-300);
+  --btn-bg-color-disabled-shaded: var(--primary-25);
+  --btn-border-color-disabled-shaded: var(--primary-25);
+  --btn-font-color-contained: var(--btn-color-base);
+  --btn-bg-color-contained: var(--primary-600);
+  --btn-border-color-contained: var(--primary-600);
+  --btn-bg-color-hover-contained: var(--primary-700);
+  --btn-border-color-hover-contained: var(--primary-700);
+  --btn-font-color-disabled-contained: var(--btn-color-base);
+  --btn-bg-color-disabled-contained: var(--primary-200);
+  --btn-border-color-disabled-contained: var(--primary-200);
+  --shadow: var(--rgb-gray);
+  --shadow-focus: var(--primary-100);
+  --ripple-effect: var(--primary-400);
 }
 
 /* Box sizing rules */
@@ -427,7 +428,7 @@ img {
   bottom: 0;
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
-  background-color: rgba(var(--rgb-dark), 0.6);
+  background-color: rgba(var(--rgb-primary), 0.6);
 }
 .hero .modal {
   position: absolute;
@@ -1113,19 +1114,6 @@ span.ripple-el {
   height: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .toggle {
-    --toggle-bg-color: var(--toggle-bg-color-active);
-    --toggle-bg-color-hover: var(--toggle-bg-color-hover-active);
-    --toggle-translateX: var(--toggle-translateX-active);
-  }
-
-  body[data-theme=light] .toggle {
-    --toggle-bg-color: var(--gray-100);
-    --toggle-circle-bg-color: var(--gray-0);
-    --toggle-translateX: 0%;
-  }
-}
 .input {
   padding: 0.625rem 0.875rem;
   width: 100%;

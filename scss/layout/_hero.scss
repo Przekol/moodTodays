@@ -7,7 +7,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	@include blurs(md, dark);
+	@include blurs(md, primary);
 
 	.modal {
 		position: absolute;
