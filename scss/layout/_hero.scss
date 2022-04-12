@@ -21,29 +21,19 @@
 		width: 100%;
 		max-width: 75em;
 		height: 100%;
-
-		box-shadow: shadow(lg);
+		background-color: var(--bg-modal);
 		border-radius: 0.5rem;
-		background-color: var(--primary-50);
+		box-shadow: shadow(lg);
+		overflow: hidden;
+
 		@include mq(small) {
 			width: 80%;
 			height: 80%;
 		}
-		overflow: hidden;
 	}
 
 	&__subtitle {
 		color: var(--primary-900);
-		text-align: center;
-	}
-
-	&__subtitle {
-		@include mq(small) {
-			text-align: left;
-		}
-	}
-	&__text-info {
-		color: var(--primary-700);
 		text-align: center;
 	}
 
@@ -55,11 +45,11 @@
 		height: 100%;
 	}
 
-	&__name-capture,
-	&__name-display {
+	&__name-capture {
 		display: flex;
 		flex-direction: column;
 		gap: var(--spacing-4);
+		
 		@include mq(small) {
 			flex-direction: row;
 			justify-content: center;
@@ -67,7 +57,7 @@
 	}
 
 	&__hint-text {
-		color: var(--primary-700);
+		color: var(--text-hint);
 	}
 
 	&__btn {
@@ -88,12 +78,14 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		max-width: 280px;
-		max-height: 220px;
-		@include mq(small) {
-			max-width: 20em;
+
+		img {
+			max-width: 280px;
+			max-height: 220px;
+
+			@include mq(small) {
+				max-width: 20em;
+			}
 		}
 	}
 }
-
-

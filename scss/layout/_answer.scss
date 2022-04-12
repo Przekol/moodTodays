@@ -1,23 +1,15 @@
 @use '../utils/' as *;
 
 .answer {
-
-    // position: absolute;
-	// bottom: 2%;
-	// left: 50%;
-	// width: 100%;
-
-	// transform: translateX(-50%);
 	&__card {
-		padding-top: var(--spacing-4);
-		padding-bottom: var(--spacing-4);
-
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		text-align: center;
 		gap: var(--spacing-8);
+		padding-top: var(--spacing-4);
+		padding-bottom: var(--spacing-4);
+		text-align: center;
 	}
 	&__title {
 		margin-top: var(--spacing-4);
@@ -26,12 +18,12 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--spacing-8);
-		width: 100%;
-		box-shadow: shadow(xl);
-		background-color: var(--primary-50);
 		padding-top: var(--spacing-4);
 		padding-bottom: var(--spacing-4);
+		width: 100%;
+		background-color: var(--bg-content);
 		border-radius: 0.5em;
+		box-shadow: shadow(xl);
 
 		@include mq(small) {
 			flex-direction: row;
@@ -45,9 +37,9 @@
 		--fs-heading: var(--fs-heading-lg);
 		--lh-heading: var(--lh-heading-lg);
 		font-size: var(--fs-heading);
-		line-height: var(--lh-heading);
-		color: var(--primary-600);
 		font-weight: var(--fw-medium);
+		line-height: var(--lh-heading);
+		color: var(--text-mood-number);
 
 		@include mq(small) {
 			--fs-heading: var(--fs-heading-xl);
@@ -61,7 +53,7 @@
 		margin-top: var(--spacing-3);
 		font-size: var(--fs-text);
 		line-height: var(--lh-text);
-		color: var(--primary-900);
+		color: var(--text-mood);
 	}
 
 	&__advice-box {

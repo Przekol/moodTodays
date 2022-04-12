@@ -1,6 +1,9 @@
 .show {
 	visibility: visible;
 }
+.has-fade {
+	visibility: hidden;
+}
 
 @keyframes fade-in {
 	0% {

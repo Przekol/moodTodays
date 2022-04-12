@@ -1,11 +1,11 @@
 @use '../utils/' as *;
 
 .card {
-	background-color: var(--primary-200);
-	box-shadow: shadow(xl);
-	border-radius: 0.5rem;
 	padding-top: var(--spacing-4);
 	padding-bottom: var(--spacing-4);
+	background-color: var(--bg-section);
+	border-radius: 0.5rem;
+	box-shadow: shadow(xl);
 	@include mq(small) {
 		padding-top: var(--spacing-16);
 		padding-bottom: var(--spacing-16);

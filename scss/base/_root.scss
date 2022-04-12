@@ -60,6 +60,6 @@
 	@each $prop, $value in $rgb {
 		--rgb-#{$prop}: #{$value};
 	}
---shadow: var(--rgb-gray);
+
 	
 }

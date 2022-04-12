@@ -1,8 +1,6 @@
 @use '../utils/' as *;
 
 .main {
-	
 	padding-top: var(--spacing-8);
-	background-color: var(--primary-50);
-
+	background-color: var(--bg-main);
 }
