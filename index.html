@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-theme="light" data-section="body" class="hidden">
-    <header class="header has-fade">
+<body data-theme="light" data-section="body">
+   <div data-section="wrapper" class="has-fade">
+    <header class="header">
         <div class="container">
             <div class="header__toggle">
                 <button aria-label="Przełącznik trybu nocnego" data-toggle="theme" class="toggle toggle--md">
@@ -27,7 +28,7 @@
         </div>
     </header>
 
-    <main class="main has-fade">
+    <main class="main">
         <section class="wrapper">
             <section class="question">
                 <div class="card container">
@@ -92,8 +93,8 @@
             </section>
         </section>
     </main>
-
-    <section class=" popup show">
+</div>
+    <section data-section="popup" class="popup">
         <div class=" modal">
             <header class="header container">
                 <div class="header__toggle">
@@ -110,10 +111,10 @@
             <div class="popup__name container">
                 <div class="popup__name-capture">
                     <div class="input__field">
-                        <input class="popup__input input" type="text" placeholder="Podaj swoje imię">
-                        <div class="popup__hint-text input__hint-text">Minimum 3 znaki</div>
+                        <input data-form="input" class="popup__input input" type="text" placeholder="Podaj swoje imię">
+                        <div data-form="hint" class="popup__hint-text input__hint-text">Minimum 3 znaki</div>
                     </div>
-                    <button data-button="first-start" class="popup__btn btn btn--xl btn--contained">Zaczynamy</button>
+                    <button data-button="popup-form" class="popup__btn btn btn--xl btn--contained">Zaczynamy</button>
                 </div>
                 <div class="popup__img">
                     <img src="./images/pixel.png" alt="">
