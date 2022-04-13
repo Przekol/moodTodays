@@ -1,11 +1,11 @@
 import { UI } from './UI.js';
 
 export class Theme extends UI {
-	constructor() {
+	constructor(theme) {
 		super();
 		this.togglesTheme = this.getElements(this.UiSelectors.toggleTheme);
 		this.body = this.getElement(this.UiSelectors.body);
-		this.theme = localStorage.getItem('theme');
+		this.theme = theme;
 	}
 
 	init() {
@@ -27,23 +27,23 @@ export class Theme extends UI {
 		this.setTheme();
 	}
 
-    checkTheme(toggle) {
-        if (this.theme === 'dark') {
-            this.setToggleToOff(toggle);
-            this.theme = 'light';
-        } else {
-            this.setToggleToOn(toggle);
-            this.theme = 'dark';
-        }
-        this.setTheme();
-    }
+	checkTheme(toggle) {
+		if (this.theme === 'dark') {
+			this.setToggleToOff(toggle);
+			this.theme = 'light';
+		} else {
+			this.setToggleToOn(toggle);
+			this.theme = 'dark';
+		}
+		this.setTheme();
+	}
 
 	checkActiveBrowserTheme() {
 		if (!this.theme) {
 			const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 			dark === true ? (this.theme = 'dark') : (this.theme = 'light');
 		}
-	}   	
+	}
 
 	setToggle(toggle) {
 		this.theme === 'dark' ? this.setToggleToOn(toggle) : this.setToggleToOff(toggle);
