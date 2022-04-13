@@ -1,11 +1,10 @@
 import { UI } from './UI.js';
 
 export class Theme extends UI {
-	constructor(theme) {
+	constructor() {
 		super();
 		this.togglesTheme = this.getElements(this.UiSelectors.toggleTheme);
 		this.body = this.getElement(this.UiSelectors.body);
-		this.theme = theme;
 	}
 
 	init() {

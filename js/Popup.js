@@ -1,18 +1,15 @@
-
 import { UI } from './UI.js';
 import { Form } from './Form.js';
 
 export class Popup extends UI {
-	constructor(userName) {
+	constructor() {
 		super();
-		this.userName = userName;
 		this.popup = this.getElement(this.UiSelectors.popup);
 		this.wrapper = this.getElement(this.UiSelectors.wrapper);
 	}
 	init() {
 		this.showPopup();
-	
-		this.addListenerToForm()
+		this.addListenerToForm();
 
 		// this.popup.addEventListener('click', () => {
 		// 	this.closePopup();
@@ -33,7 +30,7 @@ export class Popup extends UI {
 		this.wrapper.classList.add('fade-in');
 	}
 	addListenerToForm() {
-		const formPopup = new Form()
-		formPopup.init()
+		const formPopup = new Form();
+		formPopup.init();
 	}
 }

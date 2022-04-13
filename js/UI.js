@@ -1,4 +1,7 @@
-export class UI {
+import { LocalStorage } from './LocalStorage.js';
+
+export class UI extends LocalStorage {
+
 	UiSelectors = {
 		body: '[data-section="body"]',
 		wrapper: '[data-section="wrapper"]',
@@ -10,6 +13,7 @@ export class UI {
 		btnPopupForm: '[data-button="popup-form"]',
 	};
 	constructor() {
+		super()
 		this.body = this.getElement(this.UiSelectors.body);
 	}
 	getElement(selector) {
