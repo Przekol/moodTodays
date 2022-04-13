@@ -1,9 +1,17 @@
 export class UI {
 	UiSelectors = {
 		body: '[data-section="body"]',
+		wrapper: '[data-section="wrapper"]',
+		popup: '[data-section="popup"]',
+		input: '[data-form="input"]',
+		hintText: '[data-form="hint"]',
 		// buttons: '[data-button]',
 		toggleTheme: '[data-toggle="theme"]',
+		btnPopupForm: '[data-button="popup-form"]',
 	};
+	constructor() {
+		this.body = this.getElement(this.UiSelectors.body);
+	}
 	getElement(selector) {
 		return document.querySelector(selector);
 	}
