@@ -419,7 +419,7 @@ img {
   background-color: var(--bg-main);
 }
 
-.hero {
+.popup {
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -430,12 +430,12 @@ img {
           backdrop-filter: blur(16px);
   background-color: rgba(var(--rgb-primary), 0.6);
 }
-.hero .header {
+.popup .header {
   padding-top: var(--spacing-8);
   padding-bottom: var(--spacing-8);
   height: 40vh;
 }
-.hero .modal {
+.popup .modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -464,16 +464,16 @@ img {
   overflow: hidden;
 }
 @media only screen and (min-width: 36em) {
-  .hero .modal {
+  .popup .modal {
     width: 80%;
     height: 80vh;
   }
 }
-.hero__subtitle {
+.popup__subtitle {
   color: var(--primary-900);
   text-align: center;
 }
-.hero__name {
+.popup__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,7 +487,7 @@ img {
   height: 100%;
 }
 @media only screen and (min-width: 62em) {
-  .hero__name {
+  .popup__name {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -497,7 +497,7 @@ img {
             align-items: center;
   }
 }
-.hero__name-capture {
+.popup__name-capture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,7 +508,7 @@ img {
   gap: var(--spacing-4);
 }
 @media only screen and (min-width: 36em) {
-  .hero__name-capture {
+  .popup__name-capture {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -518,21 +518,21 @@ img {
             justify-content: center;
   }
 }
-.hero__hint-text {
+.popup__hint-text {
   color: var(--text-hint);
 }
 @media only screen and (min-width: 36em) {
-  .hero__btn {
+  .popup__btn {
     height: 48px;
   }
 }
 @media only screen and (min-width: 36em) {
-  .hero__name-display .hero__btn {
+  .popup__name-display .hero__btn {
     -ms-flex-item-align: center;
         align-self: center;
   }
 }
-.hero__img {
+.popup__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,12 +543,12 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
-.hero__img img {
+.popup__img img {
   max-width: 280px;
   max-height: 220px;
 }
 @media only screen and (min-width: 36em) {
-  .hero__img img {
+  .popup__img img {
     max-width: 20em;
   }
 }
