@@ -4,7 +4,6 @@ export class Theme extends UI {
 	constructor() {
 		super();
 		this.togglesTheme = this.getElements(this.UiSelectors.toggleTheme);
-		this.body = this.getElement(this.UiSelectors.body);
 	}
 
 	init() {
