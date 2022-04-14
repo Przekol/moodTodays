@@ -1,6 +1,6 @@
 export class LocalStorage {
 	constructor() {
-		this.nameUser = localStorage.getItem('nameUser');
+		this.userName = localStorage.getItem('userName');
 		this.theme = localStorage.getItem('theme');
 	}
 
@@ -8,7 +8,7 @@ export class LocalStorage {
 		return this.theme;
 	}
 
-	getNameUser() {
-		return this.nameUser;
+	getUserName() {
+		return this.userName;
 	}
 }
