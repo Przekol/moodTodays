@@ -9,10 +9,74 @@ export class Form extends UI {
 	}
 
 	init() {
-		this.btnPopupForm.addEventListener('click', () => this.sendNameUser());
+		this.btnPopupForm.addEventListener('click', (e) => {
+			this.sendUserName();
+			if (e.isTrusted) {
+				this.input.value=""
+			}
+		});
+		this.input.addEventListener('input', e => {
+			if (e.isTrusted) {
+				this.clearHint(e);
+			}
+		});
 	}
 
-	sendNameUser() {
-		console.log(this.input.value);
+	sendUserName() {
+		let value = this.input.value.trim();
+
+		this.userName = this.getValidationedText(value);
+		if (this.userName) {
+			localStorage.setItem('userName', this.userName);
+			
+		}
+	}
+	getValidationedText(inputValue) {
+		const text = this.checkLengthInput(inputValue);
+
+		if (!(text === null || text === undefined)) {
+			
+			const textUpperCase = this.getUpperCase(text);
+			return textUpperCase;
+		} else {
+			this.checkLengthInput(inputValue);
+			return false;
+		}
+	}
+
+	checkLengthInput(inputValue) {
+		if (!inputValue) {
+			this.showHint('Wpisz swoje imię!');
+			this.setInHintCssClass('error');
+			return;
+		} else if (inputValue.length < 3) {
+			this.showHint('Minimum 3 znaki!');
+			this.setInHintCssClass('warning');
+			return;
+		} else {
+			return inputValue;
+		}
+	}
+
+	getUpperCase(text) {
+		return text.toUpperCase();
+	}
+
+	clearHint() {
+		this.showHint('');
+		this.removeInHintCssClass('error');
+		this.removeInHintCssClass('warning');
+	}
+
+	setInHintCssClass(cssClass) {
+		this.hintText.classList.add(cssClass);
+	}
+
+	removeInHintCssClass(cssClass) {
+		this.hintText.classList.remove(cssClass);
+	}
+
+	showHint(message) {
+		this.hintText.textContent = message;
 	}
 }
