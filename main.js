@@ -9,7 +9,7 @@ const theme = new Theme();
 
 theme.init()
 
-if (!localStorage.getNameUser()) {
+if (!localStorage.getUserName()) {
 	const popup = new Popup();
 	popup.init();
 }
