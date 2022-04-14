@@ -1,6 +1,6 @@
-import { UI } from './UI.js';
+import { Popup } from './Popup.js';
 
-export class Form extends UI {
+export class Form extends Popup {
 	constructor() {
 		super();
 		this.input = this.getElement(this.UiSelectors.input);
@@ -9,33 +9,35 @@ export class Form extends UI {
 	}
 
 	init() {
-		this.btnPopupForm.addEventListener('click', (e) => {
-			this.sendUserName();
-			if (e.isTrusted) {
-				this.input.value=""
-			}
+		this.btnPopupForm.addEventListener('click', e => {
+			this.sendUserName(e);
 		});
 		this.input.addEventListener('input', e => {
-			if (e.isTrusted) {
-				this.clearHint(e);
+			this.clearHint(e);
+		});
+		window.addEventListener('keydown', e => {
+			if (e.code === 'Enter' || e.code === 'NumpadEnter') {
+				this.sendUserName(e);
 			}
 		});
 	}
 
-	sendUserName() {
+	sendUserName(e) {
 		let value = this.input.value.trim();
 
 		this.userName = this.getValidationedText(value);
 		if (this.userName) {
 			localStorage.setItem('userName', this.userName);
-			
+			this.closePopup();
+		}
+		if (e.isTrusted) {
+			this.input.value = '';
 		}
 	}
 	getValidationedText(inputValue) {
 		const text = this.checkLengthInput(inputValue);
 
 		if (!(text === null || text === undefined)) {
-			
 			const textUpperCase = this.getUpperCase(text);
 			return textUpperCase;
 		} else {
@@ -62,10 +64,12 @@ export class Form extends UI {
 		return text.toUpperCase();
 	}
 
-	clearHint() {
-		this.showHint('');
-		this.removeInHintCssClass('error');
-		this.removeInHintCssClass('warning');
+	clearHint(e) {
+		if (e.isTrusted) {
+			this.showHint('');
+			this.removeInHintCssClass('error');
+			this.removeInHintCssClass('warning');
+		}
 	}
 
 	setInHintCssClass(cssClass) {
