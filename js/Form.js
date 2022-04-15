@@ -1,4 +1,4 @@
-import { Popup } from './Popup.js';
+import {Popup} from './Popup.js';
 
 export class Form extends Popup {
 	constructor() {
@@ -34,12 +34,12 @@ export class Form extends Popup {
 			this.input.value = '';
 		}
 	}
+
 	getValidationedText(inputValue) {
 		const text = this.checkLengthInput(inputValue);
 
 		if (!(text === null || text === undefined)) {
-			const textUpperCase = this.getUpperCase(text);
-			return textUpperCase;
+			return this.getUpperCase(text);
 		} else {
 			this.checkLengthInput(inputValue);
 			return false;
@@ -50,11 +50,11 @@ export class Form extends Popup {
 		if (!inputValue) {
 			this.showHint('Wpisz swoje imię!');
 			this.setInHintCssClass('error');
-			return;
+
 		} else if (inputValue.length < 3) {
 			this.showHint('Minimum 3 znaki!');
 			this.setInHintCssClass('warning');
-			return;
+
 		} else {
 			return inputValue;
 		}
