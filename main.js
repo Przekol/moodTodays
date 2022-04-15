@@ -1,18 +1,19 @@
-import { LocalStorage } from './js/LocalStorage.js';
-import { Theme } from './js/Theme.js';
-import { Popup } from './js/Popup.js';
-import { Form } from './js/Form.js';
+import {LocalStorage} from './js/LocalStorage.js';
+import {Theme} from './js/Theme.js';
+import {Popup} from './js/Popup.js';
+import {Form} from './js/Form.js';
+import {Mood} from './js/Mood.js';
 
-
-const localStorage = new LocalStorage()
+const localStorage = new LocalStorage();
 const theme = new Theme();
+const popup = new Popup();
+const formPopup = new Form();
 
-
-theme.init()
+theme.init();
 
 if (!localStorage.getUserName()) {
-	const popup = new Popup();
-	popup.init();
-	const formPopup = new Form();
-	formPopup.init();
+    popup.init();
+    formPopup.init();
+} else {
+    popup.moodInit();
 }
