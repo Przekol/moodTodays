@@ -2,6 +2,7 @@ export class LocalStorage {
 	constructor() {
 		this.userName = localStorage.getItem('userName');
 		this.theme = this.loadFromLocalStorage('theme');
+		this.mood = this.loadFromLocalStorage('mood') ?? [];
 	}
 
 	getTheme() {
