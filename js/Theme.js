@@ -55,6 +55,6 @@ export class Theme extends UI {
 
 	setTheme() {
 		this.body.setAttribute('data-theme', this.theme);
-		localStorage.setItem('theme', this.theme);
+		this.saveToLocalStorage('theme', this.theme);
 	}
 }
