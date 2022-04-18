@@ -143,7 +143,7 @@
 
 		--shadow: var(--rgb-gray);
 		--shadow-focus: var(--error-100);
-		--ripple-effect:var(--error-400);
+		--btn-ripple-effect:var(--error-400);
 		&:hover {
 			--btn-bg-color: var(--btn-bg-color-hover);
 		}
@@ -244,7 +244,7 @@
 
 		--shadow: var(--rgb-gray);
 		--shadow-focus: var(--warning-100);
-		--ripple-effect: var(--warning-400);
+		--btn-ripple-effect: var(--warning-400);
 		&:hover {
 			--btn-bg-color: var(--btn-bg-color-hover);
 		}
@@ -345,7 +345,7 @@
 
 		--shadow: var(--rgb-gray);
 		--shadow-focus: var(--success-100);
-		--ripple-effect: var(--success-400);
+		--btn-ripple-effect: var(--success-400);
 		&:hover {
 			--btn-bg-color: var(--btn-bg-color-hover);
 		}
@@ -418,9 +418,10 @@
 }
 span.ripple-el {
 	position: absolute;
-	background-color: var(--ripple-effect);
+	background-color: var(--btn-ripple-effect);
 	opacity: 0.7;
 	border-radius: 50%;
+	pointer-events: none;
 	transform: translate(-50%, -50%) scale(0);
 	animation: ripple-animation 0.5s linear;
 }
