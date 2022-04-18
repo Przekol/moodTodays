@@ -1,12 +1,15 @@
-import {UI} from './UI.js';
+import { UI } from './UI.js';
 
 export class Mood extends UI {
-    constructor() {
-        super()
-    }
+	constructor() {
+		super();
+	}
 
-    init() {
-        console.log('ok');
-    }
+	init() {
+		this.setUserName();
+	}
 
+	setUserName() {
+		this.getElement(this.UiSelectors.userName).textContent = this.getUserName();
+	}
 }
