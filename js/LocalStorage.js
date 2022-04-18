@@ -1,7 +1,7 @@
 export class LocalStorage {
 	constructor() {
 		this.userName = localStorage.getItem('userName');
-		this.theme = localStorage.getItem('theme');
+		this.theme = this.loadFromLocalStorage('theme');
 	}
 
 	getTheme() {
@@ -10,5 +10,13 @@ export class LocalStorage {
 
 	getUserName() {
 		return this.userName;
+	}
+
+	saveToLocalStorage(name, value) {
+		localStorage.setItem(name, JSON.stringify(value));
+	}
+
+	loadFromLocalStorage(name) {
+		return JSON.parse(localStorage.getItem(name));
 	}
 }
