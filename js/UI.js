@@ -16,6 +16,7 @@ export class UI extends LocalStorage {
 	constructor() {
 		super();
 		this.body = this.getElement(this.UiSelectors.body);
+		this.buttons = this.getElements(this.UiSelectors.buttons);
 	}
 
 	getElement(selector) {
