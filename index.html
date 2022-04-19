@@ -7,7 +7,9 @@
 		<title>Mood today's</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+			rel="stylesheet" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 
@@ -16,13 +18,18 @@
 			<header class="header">
 				<div class="container">
 					<div class="header__toggle">
-						<button aria-label="Przełącznik trybu nocnego" data-toggle="theme" class="toggle toggle--md">
+						<button
+							aria-label="Przełącznik trybu nocnego"
+							data-toggle="theme"
+							class="toggle toggle--md">
 							<div class="toggle__circle"></div>
 						</button>
 					</div>
 					<div class="header__title">
 						<h1 class="header__title h1">Mood today's</h1>
-						<p class="header__text-info text">Codzienna informacja o tym jak się czujesz</p>
+						<p class="header__text-info text">
+							Codzienna informacja o tym jak się czujesz
+						</p>
 					</div>
 				</div>
 			</header>
@@ -35,14 +42,32 @@
 							>, Jak się teraz czujesz?
 						</h2>
 						<div class="question__emoticons">
-							<button data-button="emoticon" data-emotion="bad" class="btn btn--outlined">
-								<img class="question__emoticon" src="/images/bad.png" alt="emoticon bad" />
+							<button
+								data-button="emoticon"
+								data-emotion="bad"
+								class="btn btn--outlined">
+								<img
+									class="question__emoticon"
+									src="/images/bad.png"
+									alt="emoticon bad" />
 							</button>
-							<button data-button="emoticon" data-emotion="bored" class="btn btn--outlined">
-								<img class="question__emoticon" src="/images/bored.png" alt="emoticon bored" />
+							<button
+								data-button="emoticon"
+								data-emotion="bored"
+								class="btn btn--outlined">
+								<img
+									class="question__emoticon"
+									src="/images/bored.png"
+									alt="emoticon bored" />
 							</button>
-							<button data-button="emoticon" data-emotion="happy" class="btn btn--outlined">
-								<img class="question__emoticon" src="/images/happy.png" alt="emoticon happy" />
+							<button
+								data-button="emoticon"
+								data-emotion="happy"
+								class="btn btn--outlined">
+								<img
+									class="question__emoticon"
+									src="/images/happy.png"
+									alt="emoticon happy" />
 							</button>
 						</div>
 					</div>
@@ -55,44 +80,79 @@
 							<h3 class="answer__title h3 subtitle">Dzisiaj</h3>
 							<div class="answer__content">
 								<div class="answer__mood bad">
-									<p class="answer__mood-number" data-mood-today="bad">0</p>
+									<p class="answer__mood-number" data-mood="bad" data-day="today">0</p>
 									<p class="answer__mood-text text">Zły</p>
 								</div>
 								<div class="answer__mood bored">
-									<p class="answer__mood-number" data-mood-today="bored">0</p>
+									<p class="answer__mood-number" data-mood="bored" data-day="today">0</p>
 									<p class="answer__mood-text">Znudzony</p>
 								</div>
 								<div class="answer__mood happy">
-									<p class="answer__mood-number" data-mood-today="happy">0</p>
+									<p class="answer__mood-number" data-mood="happy" data-day="today">0</p>
 									<p class="answer__mood-text">Szczęśliwy</p>
 								</div>
 							</div>
 						</div>
 						<div class="answer__previous answer__card">
 							<h3 class="answer__title h3 subtitle">
-								Ostatnio -
-								<span data-day-pervious="08.04.2021">08.04.2021</span>
+								<span data-day="last-day" data-pervious="Wczoraj">Wczoraj</span>
 							</h3>
 							<div class="answer__content">
 								<div class="answer__mood bad">
-									<p class="answer__mood-number" data-mood data-mood-previous="bad">0</p>
+									<p class="answer__mood-number" data-mood="bad" data-day="last-day">
+										0
+									</p>
 									<p class="answer__mood-text">Zły</p>
 								</div>
 								<div class="answer__mood bored">
-									<p class="answer__mood-number" data-mood data-mood-previous="bored">0</p>
+									<p class="answer__mood-number" data-mood="bored" data-day="last-day">
+										0
+									</p>
 									<p class="answer__mood-text">Znudzony</p>
 								</div>
 								<div class="answer__mood happy">
-									<p class="answer__mood-number" data-mood data-mood-previous="happy">0</p>
+									<p class="answer__mood-number" data-mood="happy" data-day="last-day">
+										0
+									</p>
+									<p class="answer__mood-text">Szczęśliwy</p>
+								</div>
+							</div>
+						</div>
+						<div class="answer__previous answer__card">
+							<h3 class="answer__title h3 subtitle">
+								<span data-day="last-7-day">Ostatnie 7 dni</span>
+							</h3>
+							<div class="answer__content">
+								<div class="answer__mood bad">
+									<p class="answer__mood-number" data-mood="bad" data-day="last-7-day">
+										0
+									</p>
+									<p class="answer__mood-text">Zły</p>
+								</div>
+								<div class="answer__mood bored">
+									<p class="answer__mood-number" data-mood="bored" data-day="last-7-day">
+										0
+									</p>
+									<p class="answer__mood-text">Znudzony</p>
+								</div>
+								<div class="answer__mood happy">
+									<p class="answer__mood-number" data-mood="happy" data-day="last-7-day">
+										0
+									</p>
 									<p class="answer__mood-text">Szczęśliwy</p>
 								</div>
 							</div>
 						</div>
 						<div class="answer__advice answer__card">
 							<h3 class="answer__title h3 subtitle">Porada na dziś</h3>
-							<button class="btn btn--xl btn--contained" data-button="advice" data-day="today">Sprawdź poradę</button>
-							<div class="answer__content answer__advice-box answer__advice-box--happy">
-								<p class="answer__advice-text text">Może to czas na wizytę u specjalisty?</p>
+							<button class="btn btn--xl btn--contained" data-button="advice">
+								Sprawdź poradę
+							</button>
+							<div
+								class="answer__content answer__advice-box answer__advice-box--happy">
+								<p class="answer__advice-text text">
+									Może to czas na wizytę u specjalisty?
+								</p>
 							</div>
 						</div>
 					</div>
@@ -103,23 +163,36 @@
 			<div class="modal">
 				<header class="header container">
 					<div class="header__toggle">
-						<button aria-label="Przełącznik trybu nocnego" data-toggle="theme" class="toggle toggle--md">
+						<button
+							aria-label="Przełącznik trybu nocnego"
+							data-toggle="theme"
+							class="toggle toggle--md">
 							<div class="toggle__circle"></div>
 						</button>
 					</div>
 					<div class="header__title">
 						<h1 class="header__title h1">Mood today's</h1>
-						<p class="header__text-info text">Codzienna informacja o tym jak się czujesz</p>
+						<p class="header__text-info text">
+							Codzienna informacja o tym jak się czujesz
+						</p>
 					</div>
 				</header>
 
 				<div class="popup__name container">
 					<div class="popup__name-capture">
 						<div class="input__field">
-							<input data-form="input" class="popup__input input" type="text" placeholder="Podaj swoje imię" />
+							<input
+								data-form="input"
+								class="popup__input input"
+								type="text"
+								placeholder="Podaj swoje imię" />
 							<div data-form="hint" class="popup__hint-text input__hint-text"></div>
 						</div>
-						<button data-button="popup-form" class="popup__btn btn btn--xl btn--contained">Zaczynamy</button>
+						<button
+							data-button="popup-form"
+							class="popup__btn btn btn--xl btn--contained">
+							Zaczynamy
+						</button>
 					</div>
 					<div class="popup__img">
 						<img src="./images/pixel.png" alt="" />

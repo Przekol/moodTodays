@@ -11,6 +11,10 @@ export class UI extends LocalStorage {
 		toggleTheme: '[data-toggle="theme"]',
 		btnPopupForm: '[data-button="popup-form"]',
 		userName: '[data-user-name]',
+		todayStatistics: '[data-day="today"]',
+		lastDayStatistics: '[data-day="last-day"]',
+		last7DayStatistics: '[data-day="last-7-day"]',
+		btnAdvice: '[data-button="advice"]',
 	};
 
 	constructor() {
