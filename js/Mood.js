@@ -3,7 +3,7 @@ import { StatisticsMood } from './StatisticsMood.js';
 export class Mood extends StatisticsMood {
 	constructor() {
 		super();
-		this.buttonsMood = this.getMoodButtons();
+		this.buttonsMood = this.getButtonsMood();
 	}
 
 	init() {
@@ -17,26 +17,14 @@ export class Mood extends StatisticsMood {
 		this.getElement(this.UiSelectors.userName).textContent = this.getUserName();
 	}
 
-	getMoodButtons() {
+	getButtonsMood() {
 		return [...this.buttons].filter(btn => btn.dataset.button === 'emoticon');
 	}
 
-	getCurrentDate = () => {
-		const date = new Date();
-		const day = date.getDate();
-		const month = date.getMonth();
-		const year = date.getFullYear();
-		return `223${day}/${month}/${year}`;
-	};
-
 	chooseMood = e => {
 		const emotion = e.target.dataset.emotion;
-
-		const currentDate = this.getCurrentDate();
-
 		this.checkEmotion(emotion);
-		const emotions = this.getCounterMood();
-		this.addMood(currentDate, emotions);
+		this.addMood();
 	};
 
 	checkEmotion(emotion) {
@@ -54,22 +42,8 @@ export class Mood extends StatisticsMood {
 				break;
 		}
 	}
-	addMood(currentDate, emotions) {
-		let today = this.mood[0].date;
-
-		if (!today || today === currentDate) {
-			this.mood[0].date = currentDate;
-			this.mood[0].emotions = emotions;
-		} else {
-			this.clearCounterMood();
-			this.mood.unshift(...this.getMood());
-			this.mood[0].date = currentDate;
-			this.mood[0].emotions = emotions;
-		}
-		console.log(emotions);
-
-		console.log(this.mood);
-
+	addMood() {
+		this.mood[0].emotions = this.getCounterMood();
 		this.saveToLocalStorage('mood', this.mood);
 	}
 }

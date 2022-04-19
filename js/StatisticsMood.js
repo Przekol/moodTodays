@@ -11,11 +11,22 @@ export class StatisticsMood extends UI {
 	}
 
 	init() {
+		this.setMoodToLocalStorage();
+		this.saveToLocalStorage('mood', this.mood);
+	}
+
+	setMoodToLocalStorage() {
 		if (this.isMood) {
 			this.mood = this.getMood();
 			this.counterMood = this.getCounterMood();
+		} else {
+			const today = this.mood[0].date;
+			if (today !== this.getCurrentDate()) {
+				this.mood.unshift(...this.getMood());
+				this.mood[0].date = this.getCurrentDate();
+				this.mood[0].emotions = this.clearCounterMood();
+			}
 		}
-		this.saveToLocalStorage('mood', this.mood);
 	}
 
 	getCounterMood() {
@@ -29,15 +40,25 @@ export class StatisticsMood extends UI {
 	getMood() {
 		return [
 			{
-				date: null,
+				date: this.getCurrentDate(),
 				emotions: this.getCounterMood(),
 			},
 		];
 	}
 
 	clearCounterMood() {
-		this.counterBad = 0;
-		this.counterBored = 0;
-		this.counterHappy = 0;
+		return {
+			bad: 0,
+			bored: 0,
+			happy: 0,
+		};
 	}
+
+	getCurrentDate = () => {
+		const date = new Date();
+		const day = date.getDate();
+		const month = date.getMonth();
+		const year = date.getFullYear();
+		return `${day}/${month}/${year}`;
+	};
 }
