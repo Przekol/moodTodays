@@ -26,4 +26,7 @@ export class UI extends LocalStorage {
 	getElements(selector) {
 		return document.querySelectorAll(selector);
 	}
+	getButtons(value) {
+		return [...this.buttons].filter(btn => btn.dataset.button === value);
+	}
 }

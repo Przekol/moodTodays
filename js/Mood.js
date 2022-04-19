@@ -4,7 +4,7 @@ import { StatisticsMood } from './StatisticsMood.js';
 export class Mood extends UI {
 	constructor() {
 		super();
-		this.buttonsMood = this.getButtonsMood();
+		this.buttonsMood = this.getButtons('emoticon');
 		this.isMood = this.mood.length === 0;
 		this.counterBad = this.isMood ? 0 : this.mood[0].emotions.bad;
 		this.counterBored = this.isMood ? 0 : this.mood[0].emotions.bored;
@@ -28,10 +28,6 @@ export class Mood extends UI {
 
 	setUserName() {
 		this.getElement(this.UiSelectors.userName).textContent = this.getUserName();
-	}
-
-	getButtonsMood() {
-		return [...this.buttons].filter(btn => btn.dataset.button === 'emoticon');
 	}
 
 	chooseMood = e => {
