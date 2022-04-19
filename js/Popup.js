@@ -1,6 +1,5 @@
 import { UI } from './UI.js';
 import { Mood } from './Mood.js';
-import { StatisticsMood } from './StatisticsMood.js';
 
 export class Popup extends UI {
 	constructor() {
@@ -28,8 +27,6 @@ export class Popup extends UI {
 	}
 
 	moodInit() {
-		const statistics = new StatisticsMood();
-		statistics.init();
 		const mood = new Mood();
 		mood.init();
 	}
