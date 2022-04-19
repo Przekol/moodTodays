@@ -1,5 +1,4 @@
 import { UI } from './UI.js';
-import { StatisticsMood } from './StatisticsMood.js';
 
 export class Mood extends UI {
 	constructor() {
@@ -10,20 +9,15 @@ export class Mood extends UI {
 		this.counterBored = this.isMood ? 0 : this.mood[0].emotions.bored;
 		this.counterHappy = this.isMood ? 0 : this.mood[0].emotions.happy;
 		this.counterMood = this.getCounterMood();
-		this.statistics = this.addStatistics();
 	}
 
 	init() {
-		this.statistics.init();
 		this.setMoodToLocalStorage();
 		this.saveToLocalStorage('mood', this.mood);
 		this.setUserName();
 		for (const buttonMood of this.buttonsMood) {
 			buttonMood.addEventListener('click', e => this.chooseMood(e));
 		}
-	}
-	addStatistics() {
-		return new StatisticsMood();
 	}
 
 	setUserName() {
@@ -34,7 +28,6 @@ export class Mood extends UI {
 		const emotion = e.target.dataset.emotion;
 		this.checkEmotion(emotion);
 		this.addMood();
-		this.statistics.init();
 	};
 
 	checkEmotion(emotion) {
@@ -64,9 +57,8 @@ export class Mood extends UI {
 		} else {
 			const today = this.mood[0].date;
 			if (today !== this.getCurrentDate()) {
+				this.clearCounterMood();
 				this.mood.unshift(...this.getMood());
-				this.mood[0].date = this.getCurrentDate();
-				this.mood[0].emotions = this.clearCounterMood();
 			}
 		}
 	}
@@ -89,11 +81,9 @@ export class Mood extends UI {
 	}
 
 	clearCounterMood() {
-		return {
-			bad: 0,
-			bored: 0,
-			happy: 0,
-		};
+		this.counterBad = 0;
+		this.counterBored = 0;
+		this.counterHappy = 0;
 	}
 
 	getCurrentDate = () => {
