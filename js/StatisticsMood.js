@@ -15,15 +15,28 @@ export class StatisticsMood extends UI {
 		this.btnAdvice = this.getElement(this.UiSelectors.btnAdvice);
 	}
 	init() {
-		console.log(this.mood);
-		console.log(
-			this.todayStatistics,
-			this.lastDayStatistics,
-			this.last7DayStatistics,
-			this.btnAdvice,
-		);
+		this.showStatistics();
+
 		this.btnAdvice.addEventListener('click', e => {
 			console.log(e);
 		});
+	}
+	showStatistics() {
+		const moodArray = this.loadFromLocalStorage('mood');
+		this.showTodayStatistics(moodArray);
+	}
+	showTodayStatistics(moodArray) {
+		for (const today of this.todayStatistics) {
+			const mood = today.dataset.mood;
+			if (mood === 'bad') {
+				today.textContent = moodArray[0].emotions.bad;
+			}
+			if (mood === 'bored') {
+				today.textContent = moodArray[0].emotions.bored;
+			}
+			if (mood === 'happy') {
+				today.textContent = moodArray[0].emotions.happy;
+			}
+		}
 	}
 }

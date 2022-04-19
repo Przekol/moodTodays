@@ -1,4 +1,5 @@
 import { UI } from './UI.js';
+import { StatisticsMood } from './StatisticsMood.js';
 
 export class Mood extends UI {
 	constructor() {
@@ -9,6 +10,7 @@ export class Mood extends UI {
 		this.counterBored = this.isMood ? 0 : this.mood[0].emotions.bored;
 		this.counterHappy = this.isMood ? 0 : this.mood[0].emotions.happy;
 		this.counterMood = this.getCounterMood();
+		this.statistics = this.addStatistics();
 	}
 
 	init() {
@@ -18,8 +20,11 @@ export class Mood extends UI {
 		for (const buttonMood of this.buttonsMood) {
 			buttonMood.addEventListener('click', e => this.chooseMood(e));
 		}
+		this.statistics.showStatistics();
 	}
-
+	addStatistics() {
+		return new StatisticsMood();
+	}
 	setUserName() {
 		this.getElement(this.UiSelectors.userName).textContent = this.getUserName();
 	}
@@ -28,6 +33,7 @@ export class Mood extends UI {
 		const emotion = e.target.dataset.emotion;
 		this.checkEmotion(emotion);
 		this.addMood();
+		this.statistics.showStatistics();
 	};
 
 	checkEmotion(emotion) {
