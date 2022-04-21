@@ -5,10 +5,6 @@ export class LocalStorage {
 		this.mood = this.loadFromLocalStorage('mood') ?? [];
 	}
 
-	getTheme() {
-		return this.theme;
-	}
-
 	getUserName() {
 		return this.userName;
 	}
