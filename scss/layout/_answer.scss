@@ -58,17 +58,18 @@
 
 	&__advice-box {
 		justify-content: center;
+		min-height: 60px;
 
-		&--happy {
+		&.happy {
 			color: var(--success-700);
 			background-color: var(--success-100);
 		}
-		&--bored {
+		&.bored {
 			color: var(--warning-700);
 			background-color: var(--warning-100);
 		}
 
-		&--bad {
+		&.bad {
 			color: var(--error-700);
 			background-color: var(--error-100);
 		}

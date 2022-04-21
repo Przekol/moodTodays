@@ -583,16 +583,17 @@ img {
 }
 .answer__advice-box {
   justify-content: center;
+  min-height: 60px;
 }
-.answer__advice-box--happy {
+.answer__advice-box.happy {
   color: var(--success-700);
   background-color: var(--success-100);
 }
-.answer__advice-box--bored {
+.answer__advice-box.bored {
   color: var(--warning-700);
   background-color: var(--warning-100);
 }
-.answer__advice-box--bad {
+.answer__advice-box.bad {
   color: var(--error-700);
   background-color: var(--error-100);
 }
