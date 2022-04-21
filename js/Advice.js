@@ -57,6 +57,10 @@ export class Advice extends UI {
 				'Jest dobrze, ale nie najlepiej. Może włącz ulubiony serial?',
 			);
 		}
+		if (happy === bad && bored < happy) {
+			this.addInAdviceCssClass('bored');
+			this.showMessage('Teraz już wiesz co to znaczy śmiech przez łzy!');
+		}
 	}
 
 	updateStatisticsDay() {
