@@ -16,6 +16,8 @@ export class UI extends LocalStorage {
 		allDaysStatistics: '[data-day="all-days"]',
 		statistics: '[data-day]',
 		btnAdvice: '[data-button="advice"]',
+		boxAdvice: '[data-advice="box"]',
+		textAdvice: '[data-advice="text"]',
 	};
 
 	constructor() {
