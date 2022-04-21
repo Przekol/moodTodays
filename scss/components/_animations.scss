@@ -40,3 +40,10 @@
 .fade-out {
 	animation: fade-out .6s ease-in-out forwards;
 }
+
+@keyframes ripple-animation {
+	to {
+		transform: translate(-50%, -50%) scale(2);
+		opacity: 0;
+	}
+}
