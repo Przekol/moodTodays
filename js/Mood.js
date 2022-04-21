@@ -20,7 +20,7 @@ export class Mood extends UI {
 		for (const buttonMood of this.buttonsMood) {
 			buttonMood.addEventListener('click', e => this.chooseMood(e));
 		}
-		this.statistics.showStatistics();
+		this.statistics.init();
 	}
 	addStatistics() {
 		return new StatisticsMood();
@@ -33,7 +33,7 @@ export class Mood extends UI {
 		const emotion = e.target.dataset.emotion;
 		this.checkEmotion(emotion);
 		this.addMood();
-		this.statistics.showStatistics();
+		this.statistics.showStatisticsDays();
 	};
 
 	checkEmotion(emotion) {
